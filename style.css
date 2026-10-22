@@ -1,0 +1,33 @@
+/* Fungee support site: plain, readable, phone-first. Light and dark follow the system. */
+:root {
+  --bg: #f7f2e8; --card: #fffaf1; --ink: #33291f; --soft: #7a6b5c; --line: #e6dac6;
+  --accent: #b5442f; --warn-bg: #fdecd9; --warn-ink: #7a2e12; --draft-bg: #2f2a25; --draft-ink: #ffe9a8;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #1d1a17; --card: #26221e; --ink: #efe6da; --soft: #b3a493; --line: #3b342d;
+    --accent: #f08a6c; --warn-bg: #3a2318; --warn-ink: #ffd2bd; --draft-bg: #ffe9a8; --draft-ink: #2f2a25; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif; }
+.draft { background: var(--draft-bg); color: var(--draft-ink); text-align: center; font-weight: 600; font-size: 14px; padding: 8px 16px; }
+main { max-width: 720px; margin: 0 auto; padding: 20px 16px 48px; }
+header.top { display: flex; align-items: center; gap: 12px; margin: 8px 0 20px; }
+header.top .logo { font-size: 34px; }
+header.top b { font-size: 22px; }
+nav { display: flex; flex-wrap: wrap; gap: 8px 16px; margin-bottom: 24px; font-size: 15px; }
+a { color: var(--accent); }
+h1 { font-size: 26px; line-height: 1.25; margin: 0 0 4px; }
+h2 { font-size: 20px; margin: 32px 0 8px; }
+h3 { font-size: 17px; margin: 20px 0 6px; }
+.meta { color: var(--soft); font-size: 14px; margin: 0 0 20px; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; margin: 16px 0; }
+.warn { background: var(--warn-bg); color: var(--warn-ink); border: 1px solid transparent; border-radius: 14px; padding: 14px 16px; margin: 16px 0; }
+.warn h2, .warn h3 { margin-top: 0; }
+.ph { background: rgba(181, 68, 47, 0.12); border-radius: 4px; padding: 0 3px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.9em; }
+.table { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 15px; }
+th, td { text-align: left; vertical-align: top; padding: 8px 10px; border-bottom: 1px solid var(--line); }
+th { font-weight: 600; }
+ul { padding-left: 22px; }
+li { margin: 4px 0; }
+footer { color: var(--soft); font-size: 14px; margin-top: 40px; border-top: 1px solid var(--line); padding-top: 16px; }
